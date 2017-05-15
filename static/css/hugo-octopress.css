@@ -2290,3 +2290,7 @@ code.has-jax {
   border: inherit;
   color: #515151;
 }
+
+.centered {
+    text-align: center;
+}
