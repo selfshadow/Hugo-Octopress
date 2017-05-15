@@ -170,11 +170,11 @@ a {
 html {
     background: #252525 top left
 }
-body>div#main {
+body>div {
     background: #f2f2f2  top left;
     border-bottom: 1px solid #bfbfbf
 }
-body>div>div#main {
+body>div>div {
     background: #f8f8f8 top left;
     border-right: 1px solid #e0e0e0
 }
