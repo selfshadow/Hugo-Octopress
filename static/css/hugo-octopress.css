@@ -465,7 +465,7 @@ body {
     max-width: 1200px; /* original is 1200px but for some reason it is smaller in my screen */
     position: relative;
     margin: 0 auto;
-    font-size: 110%;
+    font-size: 100%;
 }
 body>header,
 body>nav,
@@ -1096,13 +1096,10 @@ article .caption-wrapper {
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: #fff 0.5em solid
+    border: #f8f8f8 0.5em solid
 }
 article img.caption,
 article video.caption,
