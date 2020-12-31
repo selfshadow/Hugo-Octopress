@@ -10,7 +10,9 @@
           <h1 class="entry-title">
             {{ .Title }} <!-- we don't need page title to be a link on the actual page -->
           </h1>
+          <!-- Stephen Hill: disable date and reading time for pages
           <p class="meta">{{ .Date.Format "Jan 2, 2006" }} - {{ .ReadingTime }} minute read - {{ if .Site.Params.disqusShortname }} <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+          -->
 
           <!-- if you want anything in the header between Disqus comments and categories add them here -->
 
@@ -27,7 +29,9 @@
           {{ end }}
           {{ .Content }}
         </div>
+        <!-- Stephen Hill: disable footer
         {{ partial "post_footer.html" . }}
+        -->
       </article>
     </div>
     {{ partial "sidebar.html" . }}
