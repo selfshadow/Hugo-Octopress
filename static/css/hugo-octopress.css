@@ -85,8 +85,7 @@ video {
     font: inherit;
     font-size: 100%;
     vertical-align: baseline;
-    font-family: "PT Serif",Georgia,Times,"Times New Roman",serif;
-
+    font-family: "Lora", serif;
 }
 html {
     line-height: 1
@@ -150,6 +149,7 @@ a:active {
     color: #01579f
 }
 aside.sidebar a {
+    font-family: "Rawline", sans-serif;
     color: #222
 }
 aside.sidebar a:focus {
@@ -248,7 +248,7 @@ h5,
 h6 {
     text-rendering: optimizelegibility;
     margin-bottom: 1em;
-    font-weight: bold;
+    font-family: "Rawline", sans-serif;
     margin-top: 1em;
 }
 h2,
@@ -782,6 +782,7 @@ body>header h1 a,
 body>header h1 a:visited,
 body>header h1 a:hover {
     color: #f2f2f2;
+    font-family: "Rawline", sans-serif;
     text-decoration: none
 }
 body>header h2 {
@@ -1049,6 +1050,7 @@ article header h1 {
     margin-top: 0.15em;
 }
 article header h1 a {
+    font-family: "Rawline", sans-serif;
     text-decoration: none
 }
 article header h1 a:hover {
@@ -1420,6 +1422,7 @@ figure.code figcaption a:hover {
 #blog-archives h1 a {
     text-decoration: none;
     color: inherit;
+    font-family: "Rawline", sans-serif;
     font-weight: normal;
     display: inline-block
 }
