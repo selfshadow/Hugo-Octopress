@@ -175,7 +175,7 @@ body>div {
     border-bottom: 1px solid #bfbfbf
 }
 body>div>div {
-    background: #f8f8f8 top left;
+    background: #ffffff top left;
     border-right: 1px solid #e0e0e0
 }
 /*.heading,
@@ -1101,7 +1101,7 @@ article .caption-wrapper {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: #f8f8f8 0.5em solid
+    /* border: #f8f8f8 0.5em solid */
 }
 article img.caption,
 article video.caption,
