@@ -66,6 +66,18 @@
   <!-- Stephen Hill: MathJax -->
   {{ partial "mathjax_support.html" . }}
 
+  <!-- Stephen Hill: Bigfoot footnotes -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style>@import url("/css/bigfoot-number.css");</style>
+  <script type="text/javascript" src="/javascripts/bigfoot.min.js"></script>
+  <script type="text/javascript">
+      var bigfoot = $.bigfoot(
+          {
+              // options here
+          }
+      );
+  </script>
+
 </head>
 <body>
 
