@@ -1685,14 +1685,14 @@ th {
   font-size: 80%;
   font-weight: bold;
   line-height: 1;
-  color: #fff;
+  color: #aaa;
   text-align: center;
   vertical-align: baseline;
-  border-radius: .25em;
+  /*border-radius: .25em;*/
 }
 a.label:hover,
 a.label:focus {
-  color: #fff;
+  color: #aaa;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1703,12 +1703,12 @@ a.label:focus {
 
 /* keep the color of visited categories- visited color makes them unreadable */
 a.label:visited {
-    color: #fff;
+    color: #aaa;
 }
 
 .label {
-  margin: 0 .25em;
-  background-color: #313131;
+  /*margin: 0 .25em;
+  background-color: #313131;*/
 }
 
 .posts a.label,
