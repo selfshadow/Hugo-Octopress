@@ -1,5 +1,5 @@
 <figure>
 <figcaption>
-	{{- .Get "text" | markdownify -}}
+	<em>{{ .Get "text" | safeHTML }}</em>
 </figcaption>
 </figure>
