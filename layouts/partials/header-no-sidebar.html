@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- added from octo -->
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  {{ if not .Site.Params.disableGoogleFonts }}
+    <!-- if local Google fonts are enabled -->
+    {{ if not .Site.Params.remoteFonts }}
+      <link href="/css/fonts.css" rel="stylesheet" type="text/css">
+    {{ else }}
+      <!-- Stephen Hill: removed fonts
+      <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+      -->
+      <!-- Stephen Hill: added fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href="https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css" rel="stylesheet" type='text/css'> 
+    {{ end }}
+  {{ end }}
+
+  <!-- Stephen Hill: additional scripts -->
+  <script type="text/javascript" src="/javascripts/retina.js"></script>
+
+  <!-- goes into the title bar -->
+  <title>{{ .Title }}</title>
+
+  <!-- css -->
+  <!-- original css -->
+  <link rel="stylesheet" href="/css/hugo-octopress.css">
+
+  <!-- css overrides -->
+  {{ range .Site.Params.customCSS }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+  {{ end }}
+
+  {{ if not .Site.Params.fontAwesome }}
+    <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  {{ else }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  {{ end }}
+
+  <!-- Icons -->
+  <link href="{{ "/favicon.png" | absURL }}" rel="icon">
+
+  <!-- RSS -->
+  {{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
+
+  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+
+  <!-- Generator version for usage tracking -->
+  {{ hugo.Generator }}
+
+  <!-- Google Analytics -->
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  <!-- Enable Twitter card -->
+  {{ with .Site.Params.twitterCardEnabled }}
+    {{ partial "custom_twitter_card.html" $ }}
+  {{ end }}
+
+  <!-- Stephen Hill: MathJax -->
+  {{ partial "mathjax_support.html" . }}
+
+  <!-- Stephen Hill: Bigfoot footnotes -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style>@import url("/css/bigfoot-number.css");</style>
+  <script type="text/javascript" src="/javascripts/bigfoot.min.js"></script>
+  <script type="text/javascript">
+      var bigfoot = $.bigfoot(
+          {
+              // options here
+          }
+      );
+  </script>
+
+  <!-- Stephen Hill: Octopress -->
+  <script type="text/javascript" src="/javascripts/modernizr-2.0.js"></script>
+  <script type="text/javascript" src="/javascripts/octopress.js"></script>
+
+</head>
+<body class="no-sidebar">
+
+<!-- top header for octopress -->
+<header role="banner">{{ partial "octo_header.html" . }}</header>
+
+<!-- navigation -->
+<nav role="navigation">{{ partial "navigation.html" . }}</nav>
