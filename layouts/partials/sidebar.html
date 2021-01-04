@@ -45,25 +45,6 @@
     </li>
   </ul>
 
-  <!-- Sidebar menu - items are read from the config file
-       first we check if it is enabled in config file and then start adding items.
-       if Site.Params.sidebarNewWindow exists and is set to true then open these links in a new window -->
-
-  {{ with .Site.Params.sidebarMenuEnabled }}
-    {{ if eq . true }}
-      <section class="odd">
-        {{ with $.Site.Params.sidebarMenuHeader }}
-          <h1>{{ . }}</h1>
-        {{ end }}
-        {{ range $.Site.Menus.sidebar }}
-          <li>
-            <a href="{{ .URL | absURL }}" title="{{ .Name }}" {{ if eq $.Site.Params.sidebarNewWindow true }} target="_blank" {{ end }}>{{ .Name }}</a>
-          </li>
-        {{ end }}
-      </section>
-    {{ end }}
-  {{ end }}
-
   <!-- Add recent posts - limit is .Site.Params.sidebarRecentLimit - example copied from https://gohugo.io/templates/go-templates/ -->
   <!-- Only display this section if sideBarRecentLimit is not zero -->
   {{ with .Site.Params.sidebarRecentLimit }}
@@ -80,6 +61,25 @@
             {{ end }}
           {{ end }}
         </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  <!-- Sidebar menu - items are read from the config file
+       first we check if it is enabled in config file and then start adding items.
+       if Site.Params.sidebarNewWindow exists and is set to true then open these links in a new window -->
+
+  {{ with .Site.Params.sidebarMenuEnabled }}
+    {{ if eq . true }}
+      <section class="odd">
+        {{ with $.Site.Params.sidebarMenuHeader }}
+          <h1>{{ . }}</h1>
+        {{ end }}
+        {{ range $.Site.Menus.sidebar }}
+          <li>
+            <a href="{{ .URL | absURL }}" title="{{ .Name }}" {{ if eq $.Site.Params.sidebarNewWindow true }} target="_blank" {{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
       </section>
     {{ end }}
   {{ end }}
