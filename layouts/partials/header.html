@@ -87,7 +87,12 @@
   <script type="text/javascript" src="/javascripts/octopress.js"></script>
 
 </head>
-<body>
+
+{{ if (or (not (isset .Params "sidebar")) (eq .Params.sidebar true)) }}
+  <body>
+{{ else }}
+  <body class="no-sidebar">
+{{ end }}
 
 <!-- top header for octopress -->
 <header role="banner">{{ partial "octo_header.html" . }}</header>
