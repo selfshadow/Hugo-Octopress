@@ -62,6 +62,19 @@
           {{ end }}
         </ul>
       </section>
+      <section class="even">
+        <h1>Recent Links</h1>
+        <ul id="recent_links">
+          {{ $pages := where $.Site.Pages "Type" "links" }}
+          {{ range first . $pages }}
+            {{ if .IsPage }}
+              <li class="links">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
     {{ end }}
   {{ end }}
 
