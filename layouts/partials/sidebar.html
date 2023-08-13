@@ -50,8 +50,8 @@
   {{ with .Site.Params.sidebarRecentLimit }}
     {{ if not (eq . 0) }}
       <section class="even">
-        <h1>Recent Posts</h1>
-        <ul id="recent_posts">
+        <h1>Latest Posts</h1>
+        <ul id="latest_posts">
           {{ $pages := where $.Site.Pages "Type" "post" }}
           {{ range first . $pages }}
             {{ if .IsPage }}
@@ -63,8 +63,8 @@
         </ul>
       </section>
       <section class="even">
-        <h1>Recent Links</h1>
-        <ul id="recent_links">
+        <h1>Latest Links</h1>
+        <ul id="latest_links">
           {{ $pages := where $.Site.Pages "Type" "links" }}
           {{ range first . $pages }}
             {{ if .IsPage }}
